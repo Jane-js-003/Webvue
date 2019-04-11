@@ -17,7 +17,7 @@
 export default {
   methods: {
     Goinner () {
-      this.$router.push({path: '/main'})
+      this.$router.push({path: '/home'})
     }
   }
 }

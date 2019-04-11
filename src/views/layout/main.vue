@@ -6,7 +6,6 @@
 				<router-view></router-view>
 			</transition>
 		</section>
-		主要内容
 	</div>
 </template>
 
