@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 427978 */
+  src: url('//at.alicdn.com/t/font_427978_72zgxnd0duy.eot');
+  src: url('//at.alicdn.com/t/font_427978_72zgxnd0duy.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_427978_72zgxnd0duy.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_427978_72zgxnd0duy.woff') format('woff'),
+  url('//at.alicdn.com/t/font_427978_72zgxnd0duy.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_427978_72zgxnd0duy.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, ul, li, div, p, th, td, table, button, i, input {
+  margin: 0px;
+  padding: 0px;
+  // font-family: "PingFangSC-Regular", "Pingfang sc", "Microsoft YaHei";
+  font-size: 12px;
+  line-height: 12px;
+}
+
+input{  
+  background: none;
+  outline: none;
+  border: 0px;
+}
+ul li {
+  list-style: none;
+}
+table, tr, th, td {
+  border: 0 none;
+}
+table {
+  border-collapse: collapse;
+}
+a, a:hover {
+  text-decoration: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  outline: none
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clearfloat {
+  zoom: 1
+}
+
+// input::-webkit-input-placeholder { /* WebKit browsers */
+//   color: #999; 
+// } 
+// input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//   color: #999; 
+// } 
+// input::-moz-placeholder { /* Mozilla Firefox 19+ */
+//   color: #999; 
+// } 
+// input::-ms-input-placeholder { /* Internet Explorer 10+ */
+//   color: #999; 
+// } 
