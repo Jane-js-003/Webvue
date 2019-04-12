@@ -7,7 +7,7 @@
         </div>
         <div class="main-nav" v-for="(item, index) in levels" :key="index">
             <router-link :to="item.path">{{item.name}}</router-link>
-            <i v-if="index < levels.length - 1" class="iconfont">&#xe614;</i>
+            <i v-if="index < levels.length - 1" class="iconfont" style="margin-right: 10px;">&#xe614;</i>
         </div>
     </div>
 </template>
@@ -36,7 +36,34 @@ export default {
             name: '首页'
           }
         ]
+      } else if (location.href.indexOf('/control/users') > -1) {
+        self.levels = [
+          {
+            path: '/home',
+            name: '首页'
+          },
+          {
+            path: '/control/users',
+            name: '用户管理'
+          }
+        ]
+      } else if (location.href.indexOf('/control/nodes') > -1) {
+        self.levels = [
+          {
+            path: '/home',
+            name: '首页'
+          },
+          {
+            path: '/control/nodes',
+            name: '节点管理'
+          }
+        ]
       }
+    }
+  },
+  watch: {
+    $route () {
+      this.Getnev()
     }
   }
 }
@@ -52,10 +79,11 @@ export default {
       color: #555666;
     }
     .main-nav i.iconfont {
-        line-height: 40px;
+        // line-height: 40px;
+        // margin-right: 10px;
     }
     .nav-back {
-        margin-left: 60px;
+        margin-left: 30px;
         cursor: pointer;
     }
     .nav-back:hover {

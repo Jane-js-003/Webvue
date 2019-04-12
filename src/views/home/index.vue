@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-inner">
       <div id="homecharts" style="width: 100%;height: 400px;"></div>
     </div>
 </template>

@@ -5,6 +5,10 @@ import Login from '@/views/login/index'
 import Index from '@/views/layout/index'
 import HomeIndex from '@/views/home/index'
 
+import ControlIndex from '@/views/control/index'
+import ControlNode from '@/views/control/nodelist'
+import ControlUser from '@/views/control/userlist'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -20,6 +24,23 @@ const router = new VueRouter({
           path: '/home',
           component: HomeIndex,
           name: '首页'
+        },
+        {
+          path: '/control',
+          component: ControlIndex,
+          redirect: '/control',
+          children: [
+            {
+              path: '/control/nodes',
+              component: ControlNode,
+              name: '节点管理'
+            },
+            {
+              path: '/control/users',
+              component: ControlUser,
+              name: '用户管理'
+            }
+          ]
         }
       ]
     }

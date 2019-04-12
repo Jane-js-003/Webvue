@@ -2,7 +2,9 @@
 	<div class="logindiv">
 		<div class="login-centent">
 			<div style="margin-bottom: 10px;"><span style="font-size: 100px;line-height: 100px;" class="iconfont">&#xe60d;</span></div>
-			<div class="input-icon clearfloat">
+			<div style="font-size: 14px;line-height: 30px;font-weight: 700;">Enterprise Management Platform</div>
+			<span style="line-height: 20px;">If you have forgotten your username or<br/> password, please ask your system administrator</span>
+			<div class="input-icon clearfloat" style="margin-top: 20px;">
 				<span class="iconfont">&#xeb8a;</span><input type="text" placeholder="Username"/>
 			</div>
 			<div class="input-icon clearfloat">

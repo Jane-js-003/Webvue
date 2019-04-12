@@ -22,8 +22,8 @@
 							<span>权限管理</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item index="1-1">选项1</el-menu-item>
-							<el-menu-item index="1-2">选项2</el-menu-item>
+							<el-menu-item index="/control/users">用户管理</el-menu-item>
+							<el-menu-item index="/control/nodes">节点管理</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="2">
