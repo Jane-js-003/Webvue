@@ -20,15 +20,44 @@
           <td><p>正常使用</p></td>
           <td><p>2019.04.12</p></td>
           <td class="last-redius" style="min-width: 120px;"><p>
-            <el-button type="success" plain>编辑</el-button>
-            <el-button type="success" plain>权限</el-button>
+            <el-button type="success" plain @click="Edituser(item)">编辑</el-button>
+            <el-button type="success" plain @click="ControlTo(item)">权限</el-button>
           </p></td>
         </tr>
       </table>
     </div>
+    <popOut :exchange-show="popshow">
+      <div class="popout-inner" style="width: 500px;height: 400px;margin: -250px 0 0 -200px;">
+        <div class="popout-title">
+          <h3>编辑用户</h3>
+        </div>
+        <div></div>
+      </div>
+    </popOut>
   </div>
 </template>
 
-<script></script>
+<script>
+import popOut from '../../components/Popout/index.vue'
+export default {
+  components: {popOut},
+  data () {
+    return {
+      popshow: false
+    }
+  },
+  methods: {
+    changeTo () {
+      this.popshow = true
+    },
+    Edituser (info) {
+      console.log(info)
+      this.popshow = true
+    },
+    ControlTo (info) {
+    }
+  }
+}
+</script>
 
 <style></style>
