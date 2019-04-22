@@ -8,6 +8,7 @@ import HomeIndex from '@/views/home/index'
 import ControlIndex from '@/views/control/index'
 import ControlNode from '@/views/control/nodelist'
 import ControlUser from '@/views/control/userlist'
+import ControlPri from '@/views/control/privilege'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const router = new VueRouter({
               path: '/control/users',
               component: ControlUser,
               name: '用户管理'
+            },
+            {
+              path: 'privilege',
+              component: ControlPri,
+              name: '权限管理'
             }
           ]
         }

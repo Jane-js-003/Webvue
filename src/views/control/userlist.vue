@@ -1,6 +1,6 @@
 <template>
   <div class="main-inner">
-    <el-button type="primary"><i class="iconfont">&#xe624;</i>添加用户</el-button>
+    <el-button type="primary" @click="Adduser"><i class="iconfont">&#xe624;</i>添加用户</el-button>
     <div class="main-table">
       <table style="width: 100%;">
         <tr class="main-table-tittle">
@@ -52,10 +52,43 @@
               <el-input v-model="frominner.add_time"></el-input>
             </el-form-item>
           </el-form>
-          <el-button type="primary" style="margin-left: 20px;">编辑</el-button>
+          <el-button type="primary" style="margin-left: 20px;" @click="EditTo">编辑</el-button>
           <el-button @click="ChangePopshow">取消</el-button>
         </div>
         <span class="iconfont" @click="ChangePopshow">&#xe62c;</span>
+      </div>
+    </popOut>
+
+    <popOut :exchange-show="Addshow">
+      <div class="popout-inner" style="width: 500px;height: 500px;margin: -250px 0 0 -300px;">
+        <div class="popout-title">
+          <h3>添加用户</h3>
+        </div>
+        <div class="form-div">
+          <el-form label-position="left" label-width="80px" :model="frominner">
+            <el-form-item label="用户名称">
+              <el-input v-model="frominner.name"></el-input>
+            </el-form-item>
+            <el-form-item label="联系电话">
+              <el-input v-model="frominner.contact_num"></el-input>
+            </el-form-item>
+            <el-form-item label="联系地址">
+              <el-input v-model="frominner.contact_address"></el-input>
+            </el-form-item>
+            <el-form-item label="邮箱">
+              <el-input v-model="frominner.contact_email"></el-input>
+            </el-form-item>
+            <el-form-item label="状态">
+              <el-input v-model="frominner.status"></el-input>
+            </el-form-item>
+            <el-form-item label="添加时间">
+              <el-input v-model="frominner.add_time"></el-input>
+            </el-form-item>
+          </el-form>
+          <el-button type="primary" style="margin-left: 20px;" @click="AddTo">添加</el-button>
+          <el-button @click="Addshow=false">取消</el-button>
+        </div>
+        <span class="iconfont" @click="Addshow=false">&#xe62c;</span>
       </div>
     </popOut>
   </div>
@@ -68,6 +101,7 @@ export default {
   data () {
     return {
       popshow: false,
+      Addshow: false,
       items: [
         {
           name: '管理员3',
@@ -89,6 +123,16 @@ export default {
     }
   },
   methods: {
+    Adduser () {
+      var self = this
+      self.frominner = {}
+      self.Addshow = true
+    },
+    AddTo () {
+      var self = this
+      self.items.push(self.frominner)
+      self.Addshow = false
+    },
     ChangePopshow () {
       this.popshow = false
     },
@@ -96,7 +140,11 @@ export default {
       this.frominner = info
       this.popshow = true
     },
+    EditTo () {
+      this.popshow = false
+    },
     ControlTo (info) {
+      this.$router.push('/control/privilege')
     }
   }
 }
